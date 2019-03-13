@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>talk in js-代理模式</title>
+</head>
+<body>
+ <script>
+     //object
+    //  描述的方式对象是怎样的就出来了
+    //  对象字面量 JSON Object
+    const xx = {
+      name: '肖鑫',
+      age: 22,
+      yz:86,
+      single: true,
+      hometown: '赣州',
+      room: 1315,
+      // 上面的属性
+      // 函数功能 行为方法函数
+      // target 形参
+    sendFlower:function(target){
+        // console.log(target.name);
+        target.receiveFlower(xx);
+      }
+    };
+    
+    const xer = {
+      name: '秀儿',
+      age: 19,
+      mood:50,
+      receiveFlower: function(sender) {
+        //   if (sender.yz <85) {
+        //       console.log('没空，不阔能有空^.^');    
+        //   }else {
+        //       console.log('好呀，么么哒');  
+        //   }
+            if (xer.mood > 80){
+                console.log('收了花');
+            }else  {
+                console.log('心情不好，不收');
+            }
+        //   console.log(xer.name,'收到了花，并向你扔了一个么么哒');
+      },
+    listenGoodMod:function() {
+           if (xer.mood < 80 ) {
+            xer.mood=xer.mood+40;
+        }else {}
+
+           
+            // 心情不好
+
+            //定时器
+            // console.log('本宫谁都不想见，除了肖爱卿');
+            setTimeout(function() {
+                // console.log('本宫心情变好了，叫肖爱卿速速来见朕');
+                xer.receiveFlower();
+            },3000);
+        }
+      }
+    
+    // 送花 A->B A->C->B
+    // A 送花 send_flower
+    // C 收花 转送给B
+    // B 收花 receive_flower
+
+    const xw = {
+      name:'秀文',
+    //   与秀儿实现了同样的接口
+      receiveFlower: function(sender) {
+        //   心情好，再送
+        // xer.receiveFlower(sender);
+        // 代理者，监听一下秀儿的心情
+        xer.listenGoodMod(function() {
+ 
+        })
+      }
+
+    }
+</script>  
+
+</body>
+</html>
