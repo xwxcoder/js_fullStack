@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transition</title>
+    <style>
+    #box {
+        width: 10px;
+        height: 10px;
+        border: 1px solid #000;
+        transition: width .5s;
+    }
+    </style>
+</head>
+<body>
+  <div id="box">
+      <!-- <img src="" alt="xx"> -->
+  </div>
+  <script>
+  const box = document.getElementById('box');
+  let width = 10;
+  let height =10;
+  box.addEventListener('click',() =>{
+      width +=20;
+      height +=20;
+      box.style.width = width + 'px';
+      box.style.height = height + 'px';
+
+  })
+  </script>  
+</body>
+</html>
