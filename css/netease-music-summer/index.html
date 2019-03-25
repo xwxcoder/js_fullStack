@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>年度听歌报告</title>
+    <link rel="shortcut icon" href="//s1.music.126.net/style/favicon.ico">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <audio src="./bgm.mp3" id="bgm"></audio>
+    <!-- 关闭 -->
+     <div class="music-btn off"></div>
+     <script>
+         const musicBtn=document.querySelector('.music-btn');
+         const bgm=document.getElementById('bgm');
+         let flag=true;
+         musicBtn.addEventListener('click',()=>{
+             if(bgm.paused){
+                bgm.play();//播放
+                // musicBtn.classList.remove('off');
+             }else{
+            bgm.pause();//暂停
+            // musicBtn.classList.add('off');
+             }
+            //  flag=!flag;
+            musicBtn.classList.toggle('off');
+         });
+     </script>
+</body>
+</html>
