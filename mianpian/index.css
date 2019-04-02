@@ -18,9 +18,9 @@ html,body {
 .img-lay .img {
     /* height: 40%; */ 
     display: block;
-    background: url(./zyx.jpg) no-repeat;
-    height: 200px;
-    width: 345px;
+    background: url(./1.jpg) no-repeat;
+    height: 300px;
+    width: 380px;
     background-size: cover;
 }
 .userinfo-name{
