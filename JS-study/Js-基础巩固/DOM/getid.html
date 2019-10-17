@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>document.getElementById</title>
+</head>
+
+<body>
+  <!-- 学过HTML/CSS样式，都知道，网页由标签将信息组织起来，而标签的id属性值是唯一的，
+  就像是每人有一个身份证号一样，只要通过身份证号就可以找到相对应的人。
+  那么在网页中，我们通过id先找到标签，然后进行操作。 -->
+  <p id="con">JavaScript</p>
+  <script type="text/javascript">
+    var mychar = document.getElementById("con");
+    document.write("结果:" + mychar); //输出获取的P标签。 结果为null或[object HTMLParagraphElement] 因为没有获取到元素内容
+    document.write("结果:" + mychar.innerHTML);//此时结果为：JavaScript
+  </script>
+
+
+</body>
+
+</html>

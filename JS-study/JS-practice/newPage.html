@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>newPage</title>
+</head>
+
+<body>
+    <!-- 1、新窗口打开时弹出确认框，是否打开
+
+    提示: 使用 if 判断确认框是否点击了确定，如点击弹出输入对话框，否则没有任何操作。
+    2、通过输入对话框，确定打开的网址，默认为 http：www.baidu.com
+    
+    3、打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。 -->
+  <script type="text/javascript">
+    function openwindow() {
+      var message = confirm("是否打开新窗口？");
+      if(message) {
+        var message1 = prompt("请输入要打开的网址：","http：www.baidu.com");
+        if(message1!=null) {
+          window.open(message1,'_blank','width=400,height=500,menubar=no,toolbar=no');
+        }
+
+      }else {
+        alert("欢迎下次再来！")
+      }
+      
+    }
+  </script>
+<input type="button" value="打开新窗口" onclick="openwindow()" /> 
+</body>
+
+</html>
